@@ -1,6 +1,6 @@
 {
   "name": "pg-mem-uuid-ossp",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "UUID-OSSP extension for pg-mem",
   "main": "dist/index.js",
   "scripts": {
