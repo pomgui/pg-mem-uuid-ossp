@@ -1,0 +1,42 @@
+{
+  "name": "pg-mem-uuid-ossp",
+  "version": "0.0.1",
+  "description": "UUID-OSSP extension for pg-mem",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "rimraf ./dist && tsc",
+    "test": "jest",
+    "test:cover": "jest --coverage",
+    "preversion": "npm run prepare",
+    "version": "npm test && git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "pg-mem",
+    "pg",
+    "pstgresql",
+    "uuid-ossp"
+  ],
+  "author": "Wilfredo Pomier <wpomier@pomgui.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pomgui/pg-mem-uuid-ossp.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/uuid": "^8.3.4",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.3"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ],
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "peerDependencies": {
+    "pg-mem": "^2.3.5"
+  }
+}
